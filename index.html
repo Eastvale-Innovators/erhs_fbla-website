@@ -1,91 +1,606 @@
 <!DOCTYPE html>
-<html class="text-center" data-bs-theme="light" lang="en" style="font-family: Barlow, sans-serif;">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>ERHS_FBLA_Website (Backup 1693965846852)</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
-    <link rel="stylesheet" href="assets/css/DA_About.css">
-    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-icons.css">
-    <link rel="stylesheet" href="assets/css/Sidebar-Menu-sidebar.css">
-    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
-    <link rel="stylesheet" href="assets/css/Ultimate-Sidebar-Menu.css">
-</head>
+    <title>ERHS FBLA - Home</title>
 
-<body>
-    <section id="Image-Section"><img id="MainPagePhoto" src="assets/img/FBLA%20eastvale%20city%20photo.jpeg" width="1920" height="1080" style="backdrop-filter: opacity(1);width: 100%;height: 100%;" loading="lazy"></section><a class="btn btn-primary btn-customized open-menu" role="button"><i class="fa fa-navicon"></i>&nbsp;Menu</a>
-    <div class="d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center highlight-blue" id="About" style="height: 500px;background-color: rgba(255,255,255,0.9);padding: 100px;">
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style5.css" />
+
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+        <a href="index.html"
+          ><div class="sidebar-header">
+            <h4>Welcome to</h4>
+            <h3>ERHS FBLA</h3>
+          </div></a
+        >
+
+        <ul class="list-unstyled components">
+          <li>
+            <a href="">Competitive Events</a>
+          </li>
+          <li class="active">
+            <a
+              href="#projectsSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Projects</a
+            >
+            <ul class="collapse list-unstyled" id="projectsSubmenu">
+              <li>
+                <a href="#">American Enterprise</a>
+              </li>
+              <li>
+                <a href="csproj.html">Community Service</a>
+              </li>
+              <li>
+                <a href="#">Adopt-a-Chapter</a>
+              </li>
+              <li>
+                <a href="businessParts.html">Partnership w/ Businesses</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Community Service</a>
+            <!--<a
+              href="#pageSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Pages</a
+            >
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>-->
+          </li>
+
+          <li>
+            <a href="#">Press Releases</a>
+          </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+          <li>
+            <a
+              href="https://bootstrapious.com/tutorial/files/sidebar.zip"
+              class="download"
+              >TBD</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://bootstrapious.com/p/bootstrap-sidebar"
+              class="article"
+              >TBD</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <button
+              class="btn btn-dark d-inline-block d-lg-none ml-auto"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-align-justify"></i>
+            </button>
+            <h1 style="color: #0a2e7f; align-items: left">Home</h1>
+            <div
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            ></div>
+          </div>
+        </nav>
+
+        <section class="text-white py-4 py-xl-5">
+          <div class="container">
+            <div
+              class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5"
+              style="
+                opacity: 0.5;
+                background: linear-gradient(
+                    rgba(0, 123, 255, 0.2),
+                    rgba(0, 123, 255, 0.2)
+                  ),
+                  url('assets/img/FBLA_eastvale_city_photo.jpeg') center / cover;
+                height: 500px;
+              "
+            ></div>
+          </div>
+          <div class="row" style="padding-top: 5%">
+            <div
+              class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center"
+            >
+              <div>
+                <h1 class="text-uppercase fw-bold mb-3" style="color: #010064">
+                  About ERHS FBLA
+                </h1>
+                <p class="mb-4" style="color: #010064">
+                  We are the 4th largest chapter of the largest student-run
+                  <br />Our 1000+ members are involved in:
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+          <div class="col">
+            <div class="card">
+              <div class="card-body p-4">
+                <figure class="figure">
+                  <img class="img-fluid figure-img" />
+                  <h4>Competitive Events</h4>
+                  <p>
+                    Erat netus est hendrerit, nullam et quis ad cras porttitor
+                    iaculis. Bibendum vulputate cras aenean.
+                  </p>
+                  <button
+                    class="btn btn-primary"
+                    id="CompEvents-Info-Button"
+                    type="button"
+                  >
+                    Learn More
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body p-4">
+                <figure class="figure">
+                  <img class="img-fluid figure-img" />
+                  <h4>Projects</h4>
+                  <p>
+                    Erat netus est hendrerit, nullam et quis ad cras porttitor
+                    iaculis. Bibendum vulputate cras aenean.
+                  </p>
+                  <button
+                    class="btn btn-primary"
+                    id="CompEvents-Info-Button-1"
+                    type="button"
+                  >
+                    Learn More
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body p-4">
+                <figure class="figure">
+                  <img class="img-fluid figure-img" />
+                  <h4>Community Service</h4>
+                  <p>
+                    Erat netus est hendrerit, nullam et quis ad cras porttitor
+                    iaculis. Bibendum vulputate cras aenean.
+                  </p>
+                  <button
+                    class="btn btn-primary"
+                    id="CompEvents-Info-Button-2"
+                    type="button"
+                  >
+                    Learn More
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container py-4 py-xl-5">
+          <h1 style="text-align: center">
+            Our Member Of The Month - August 2023
+          </h1>
+          <div class="row gy-4 gy-md-0">
+            <div class="col-md-6">
+              <div class="p-xl-5 m-xl-5">
+                <img
+                  class="rounded img-fluid w-100 fit-cover"
+                  style="min-height: 300px"
+                  src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 d-md-flex align-items-md-center">
+              <div style="max-width: 350px">
+                <h2 class="text-uppercase fw-bold">Jiayi (Jason) Qin</h2>
+                <p class="my-3">Sophomore - Class of 2025(?)</p>
+                <p class="my-3">
+                  <strong
+                    ><span style="color: rgb(5, 44, 101)"
+                      >From Jiayi himself:</span
+                    ></strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container">
-            <div class="intro">
-                <h2 class="text-center" style="color: #172f76;font-family: Barlow, sans-serif;padding-top: 100px;">ABOUT</h2>
-                <hr style="height: 2px;color: #214a80;background-color: #172f76;">
-                <p class="text-center" style="color: #172f76;font-family: Muli, sans-serif;font-size: 20;"><br>We are the 4th largest chapter of the largest student-run<br>organization in the world.<br>Our 1000+ members are involved in:</p>
+          <h1 class="text-center">Agenda</h1>
+        </div>
+        <h1 style="text-align: center">Check Out Our Social Media</h1>
+        <div
+          class="text-center d-xl-flex justify-content-xl-center align-items-xl-center"
+          style="text-align: center"
+        >
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/mustangsfbla/?utm_source=ig_embed&amp;utm_campaign=loading"
+            data-instgrm-version="14"
+            style="
+              background: #fff;
+              border: 0;
+              border-radius: 3px;
+              box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                0 1px 10px 0 rgba(0, 0, 0, 0.15);
+              margin: 1px;
+              max-width: 540px;
+              min-width: 326px;
+              padding: 0;
+              width: 99.375%;
+              width: -webkit-calc(100% - 2px);
+              width: calc(100% - 2px);
+            "
+          >
+            <div style="padding: 16px">
+              <a
+                href="https://www.instagram.com/mustangsfbla/?utm_source=ig_embed&amp;utm_campaign=loading"
+                style="
+                  background: #ffffff;
+                  line-height: 0;
+                  padding: 0 0;
+                  text-align: center;
+                  text-decoration: none;
+                  width: 100%;
+                "
+                target="_blank"
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                  "
+                >
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 50%;
+                      flex-grow: 0;
+                      height: 40px;
+                      margin-right: 14px;
+                      width: 40px;
+                    "
+                  ></div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      flex-grow: 1;
+                      justify-content: center;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        margin-bottom: 6px;
+                        width: 100px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        width: 60px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div style="padding: 19% 0"></div>
+                <div
+                  style="
+                    display: block;
+                    height: 50px;
+                    margin: 0 auto 12px;
+                    width: 50px;
+                  "
+                >
+                  <svg
+                    width="50px"
+                    height="50px"
+                    viewBox="0 0 60 60"
+                    version="1.1"
+                    xmlns="https://www.w3.org/2000/svg"
+                    xmlns:xlink="https://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        transform="translate(-511.000000, -20.000000)"
+                        fill="#000000"
+                      >
+                        <g>
+                          <path
+                            d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div style="padding-top: 8px">
+                  <div
+                    style="
+                      color: #3897f0;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 550;
+                      line-height: 18px;
+                    "
+                  >
+                    View this profile on Instagram
+                  </div>
+                </div>
+                <div style="padding: 12.5% 0"></div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 14px;
+                    align-items: center;
+                  "
+                >
+                  <div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        height: 12.5px;
+                        width: 12.5px;
+                        transform: translateX(0px) translateY(7px);
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        height: 12.5px;
+                        transform: rotate(-45deg) translateX(3px)
+                          translateY(1px);
+                        width: 12.5px;
+                        flex-grow: 0;
+                        margin-right: 14px;
+                        margin-left: 2px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        height: 12.5px;
+                        width: 12.5px;
+                        transform: translateX(9px) translateY(-18px);
+                      "
+                    ></div>
+                  </div>
+                  <div style="margin-left: 8px">
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        flex-grow: 0;
+                        height: 20px;
+                        width: 20px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        width: 0;
+                        height: 0;
+                        border-top: 2px solid transparent;
+                        border-left: 6px solid #f4f4f4;
+                        border-bottom: 2px solid transparent;
+                        transform: translateX(16px) translateY(-4px)
+                          rotate(30deg);
+                      "
+                    ></div>
+                  </div>
+                  <div style="margin-left: auto">
+                    <div
+                      style="
+                        width: 0px;
+                        border-top: 8px solid #f4f4f4;
+                        border-right: 8px solid transparent;
+                        transform: translateY(16px);
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        flex-grow: 0;
+                        height: 12px;
+                        width: 16px;
+                        transform: translateY(-4px);
+                      "
+                    ></div>
+                    <div
+                      style="
+                        width: 0;
+                        height: 0;
+                        border-top: 8px solid #f4f4f4;
+                        border-left: 8px solid transparent;
+                        transform: translateY(-4px) translateX(8px);
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    justify-content: center;
+                    margin-bottom: 24px;
+                  "
+                >
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 4px;
+                      flex-grow: 0;
+                      height: 14px;
+                      margin-bottom: 6px;
+                      width: 224px;
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 4px;
+                      flex-grow: 0;
+                      height: 14px;
+                      width: 144px;
+                    "
+                  ></div></div
+              ></a>
+              <p
+                style="
+                  color: #c9c8cd;
+                  font-family: Arial, sans-serif;
+                  font-size: 14px;
+                  line-height: 17px;
+                  margin-bottom: 0;
+                  margin-top: 8px;
+                  overflow: hidden;
+                  padding: 8px 0 7px;
+                  text-align: center;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                "
+              >
+                <a
+                  href="https://www.instagram.com/mustangsfbla/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="
+                    color: #c9c8cd;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 17px;
+                  "
+                  target="_blank"
+                  >ERHS FBLA</a
+                >
+                (@<a
+                  href="https://www.instagram.com/mustangsfbla/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="
+                    color: #c9c8cd;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 17px;
+                  "
+                  target="_blank"
+                  >mustangsfbla</a
+                >) • Instagram photos and videos
+              </p>
             </div>
-            <div class="row">
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <h1 class="text-center" style="font-family: Barlow, sans-serif;color: var(--bs-primary-text-emphasis);">Competitive Events</h1>
-                    <div class="login-card"><img class="profile-img-card" src="http://placehold.it/350x350">
-                        <p class="profile-name-card">Description of Comp Events</p><button class="btn btn-primary" id="CompEvents-Info-Button" type="button" style="background: var(--bs-primary-text-emphasis);">Learn More</button>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <h1 class="text-center" style="font-family: Barlow, sans-serif;color: var(--bs-primary-text-emphasis);">Projects</h1>
-                    <div class="login-card"><img class="profile-img-card" src="http://placehold.it/350x350">
-                        <p class="profile-name-card" style="font-family: Barlow, sans-serif;">Description of Projects</p><a class="btn btn-primary" role="button" id="Projects-info-button" style="background: var(--bs-primary-text-emphasis);" target="_blank">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <h1 class="text-center" style="font-family: Barlow, sans-serif;color: var(--bs-primary-text-emphasis);">Community Service</h1>
-                    <div class="login-card"><img class="profile-img-card" src="http://placehold.it/350x350">
-                        <p class="profile-name-card" style="font-family: Barlow, sans-serif;">Description of CS</p><button class="btn btn-primary" id="CS-info-button" type="button" style="background: var(--bs-primary-text-emphasis);color: var(--bs-btn-disabled-color);"><span style="color: rgb(243, 244, 245);">Learn More</span></button>
-                    </div>
-                </div>
-            </div>
+          </blockquote>
+          <script async src="//www.instagram.com/embed.js"></script>
         </div>
-    </div>
-    <div id="MoM">
-        <h4 style="padding: 50px;padding-top: 250px;">August Member of the Month</h4>
-        <div class="container d-inline-flex"><img class="d-xxl-flex justify-content-xxl-start" id="MoM-Image" width="100" height="80" style="width: 500px;height: 477px;">
-            <p class="text-start d-flex d-xxl-flex justify-content-xxl-end align-items-xxl-start" id="MoM-info" style="color: var(--bs-primary-text-emphasis);padding: 50px;">Name: Jiayi(Jason) Qin<br>Grade: Sophomore<br>Additional Info:<br><br>From Jiayi himself:</p>
-        </div>
-    </div>
-    <div id="Agenda">
-        <h1>Agenda</h1>
-        <div class="container" style="height: 300px400px400px;"></div>
-    </div>
-    <div id="Insta-Posts">
-        <h1 style="padding: 50px;">Check out our Posts!</h1>
-        <div class="row">
-            <div class="col"><img style="width: 350px;height: 350px;padding: 50px;"><img style="width: 350px;height: 350px;padding: 50px;"><img style="width: 350px;height: 350px;padding: 50px;"></div>
-        </div>
-    </div>
-    <footer class="text-center bg-dark">
-        <div class="container text-white py-4 py-lg-5">
-            <ul class="list-inline">
-                <li class="list-inline-item me-4"><a class="link-light" href="#">Web design</a></li>
-                <li class="list-inline-item me-4"><a class="link-light" href="#">Development</a></li>
-                <li class="list-inline-item"><a class="link-light" href="#">Hosting</a></li>
-            </ul>
-            <ul class="list-inline">
-                <li class="list-inline-item me-4"><svg class="bi bi-envelope-fill text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 16px;">
-    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"></path>
-</svg></li>
-                <li class="list-inline-item me-4"><svg class="bi bi-twitter text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-</svg></li>
-                <li class="list-inline-item"><a href="https://www.instagram.com/mustangsfbla/" target="blank"><svg class="bi bi-instagram text-light" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
-</svg></a></li>
-            </ul>
-            <p class="text-muted mb-0">Copyright © 2023 Brand</p>
-        </div>
-    </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/Sidebar-Menu-sidebar.js"></script>
-    <script src="assets/js/Ultimate-Sidebar-Menu.js"></script>
-</body>
 
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"
+        ></script>
+        <!-- Popper.JS -->
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+          integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+          crossorigin="anonymous"
+        ></script>
+        <!-- Bootstrap JS -->
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+          integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+          crossorigin="anonymous"
+        ></script>
+
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $("#sidebarCollapse").on("click", function () {
+              $("#sidebar").toggleClass("active");
+              $(this).toggleClass("active");
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </body>
 </html>
