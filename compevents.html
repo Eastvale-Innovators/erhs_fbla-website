@@ -14,21 +14,116 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-body py-3 sticky-top" style="background: linear-gradient(#0a2e7f, #0a2e7f), #0a2e7f;">
-        <div class="container"><button class="btn btn-primary ,&quot;bi bi-menu-button" type="button" style="--bs-body-bg: fff;background: #0a2e7f;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: white;margin-bottom: 2.5px;font-size: 2vw;">
-                    <path d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="currentColor"></path>
-                    <path d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z" fill="currentColor"></path>
-                    <path d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z" fill="currentColor"></path>
-                </svg></button><a class="navbar-brand d-flex align-items-center" href="#"><span style="margin: 0px;margin-right: 20px;font-size: 2.0vw;"><span style="color: rgb(255, 255, 255);">ERHS FBLA</span></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-2">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="margin: 0px;margin-right: 20px;font-size: 1.5vw;"><span style="color: rgba(255, 255, 255, 0.9);">CA FBLA</span></a></li>
+    <div>
+        <div class="wrapper" style="height: 100vh; position: sticky">
+          <!-- Sidebar Holder -->
+          <nav id="sidebar">
+            <a href="index.html"
+              ><div class="sidebar-header">
+                <h4>Welcome to</h4>
+                <h3>ERHS FBLA</h3>
+              </div></a
+            >
+    
+            <ul class="list-unstyled components">
+              <li>
+                <a href="compevents.html">Competitive Events</a>
+              </li>
+              <li class="active">
+                <a
+                  href="#projectsSubmenu"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle"
+                  >Projects</a
+                >
+                <ul class="collapse list-unstyled" id="projectsSubmenu">
+                  <li>
+                    <a href="#">American Enterprise</a>
+                  </li>
+                  <li>
+                    <a href="csproj.html">Community Service</a>
+                  </li>
+                  <li>
+                    <a href="#">Adopt-a-Chapter</a>
+                  </li>
+                  <li>
+                    <a href="businessParts.html">Partnership w/ Businesses</a>
+                  </li>
                 </ul>
-            </div>
-        </div>
-    </nav>
+              </li>
+              <li>
+                <a href="CSevents.html">Community Service</a>
+                <!--<a
+                  href="#pageSubmenu"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle"
+                  >Pages</a
+                >
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                    <a href="#">Page 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 3</a>
+                  </li>
+                </ul>-->
+              </li>
+    
+              <li>
+                <a href="#">Press Releases</a>
+              </li>
+            </ul>
+    
+            <ul class="list-unstyled CTAs">
+              <li>
+                <a
+                  href="https://bootstrapious.com/tutorial/files/sidebar.zip"
+                  class="download"
+                  >TBD</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://bootstrapious.com/p/bootstrap-sidebar"
+                  class="article"
+                  >TBD</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <button
+              class="btn btn-dark d-inline-block d-lg-none ml-auto"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-align-justify"></i>
+            </button>
+            <h1 style="color: #0a2e7f; align-items: left">Home</h1>
+            <div
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            ></div>
+          </div>
+        </nav>
+        
     <div style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center / cover, url(&quot;assets/img/compy.jpeg&quot;) center / cover;height: 80vh;"></div>
     <div class="align-items-center">
         <div></div>
