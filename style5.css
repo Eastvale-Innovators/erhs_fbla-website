@@ -16,6 +16,10 @@ p {
   color: #999;
 }
 
+footer {
+  height: 30vh;
+}
+
 a,
 a:hover,
 a:focus {
