@@ -16,6 +16,10 @@ p {
   color: #999;
 }
 
+iframe {
+  flex: 1 1 auto;
+}
+
 footer {
   height: 30vh;
 }
