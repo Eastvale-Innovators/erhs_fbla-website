@@ -164,15 +164,15 @@ a.download {
   color: #7386d5;
 }
 
-a.article {
-  background: #6d7fcc !important;
+.btn {
+  background: #f4ab19 !important;
   color: #fafafa !important;
   transition: all 250ms;
 }
-
-a.article:hover {
-  background: #fafafa !important;
-  color: #6d7fcc !important;       
+.btn:hover {
+  background: #f4ab19 !important;
+  color: #0a2e7f !important;       
+  transform: scale(1.1);
 }
 
 /* ---------------------------------------------------
