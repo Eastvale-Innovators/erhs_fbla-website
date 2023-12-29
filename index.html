@@ -17,6 +17,11 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style5.css" />
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <!-- Font Awesome JS -->
     <script
       defer
@@ -36,7 +41,7 @@
     <div>
     <div class="wrapper">
       <!-- Sidebar Holder -->
-      <nav id="sidebar">
+      <nav id="sidebar" class="active">
         <a href="index.html"
           ><div class="sidebar-header">
             <h4>Welcome to</h4>
@@ -48,7 +53,7 @@
           <li>
             <a href="compevents.html">Competitive Events</a>
           </li>
-          <li class="active">
+          <li>
             <a
               href="#projectsSubmenu"
               data-toggle="collapse"
@@ -92,10 +97,6 @@
               </li>
             </ul>-->
           </li>
-
-          <li>
-            <a href="#">Press Releases</a>
-          </li>
         </ul>
 
         <ul class="list-unstyled CTAs">
@@ -113,21 +114,10 @@
       <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <button type="button" id="sidebarCollapse" class="navbar-btn">
+            <button id="sidebarCollapse" class="navbar-btn active">
               <span></span>
               <span></span>
               <span></span>
-            </button>
-            <button
-              class="btn btn-dark d-inline-block d-lg-none ml-auto"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fas fa-align-justify"></i>
             </button>
             <h1 style="color: #0a2e7f; align-items: left; padding-left: 1vw; translate: 0 0.5vh;"><a href="index.html">ERHS FBLA</a></h1>
             <div
@@ -152,7 +142,7 @@
                 <h1 class="text-uppercase fw-bold mb-0" style="color: #010064">
                   About ERHS FBLA
                 </h1>
-                <p class="mb-4" style="color: #010064">
+                <p style="color: #010064; padding-top: 1vh;">
                   We are the 4th largest chapter of the largest student-run organization in the country
                   <br />Our 1000+ members are involved in:
                 </p>
@@ -161,10 +151,10 @@
           </div>
         </section>
 
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" style="padding-left: 150px; padding-right: 150px;">
+        <div class="row gy-0 row-cols-1 row-cols-md-2 row-cols-xl-3" style="padding-left: 150px; padding-right: 150px;">
           <div class="col">
             <div class="card">
-              <div class="card-body p-4">
+              <div class="card-body px-4">
                 <figure class="figure">
                   <img class="img-fluid figure-img" />
                   <h4>Competitive Events</h4>
@@ -172,7 +162,7 @@
                     ISLC + SLC + NLC = Awesome (TO BE CHANGED)
                   </p>
                   <a
-                    class="btn btn-primary"
+                    class="btn"
                     id="CompEvents-Info-Button"
                     type="button"
                     href="compevents.html"
@@ -185,7 +175,7 @@
           </div>
           <div class="col">
             <div class="card">
-              <div class="card-body p-4">
+              <div class="card-body px-4">
                 <figure class="figure">
                   <img class="img-fluid figure-img" />
                   <h4>Projects</h4>
@@ -193,7 +183,7 @@
                     From Business Partnership to Chapter Adoption, we do it all
                   </p>
                   <a
-                    class="btn btn-primary"
+                    class="btn"
                     id="CompEvents-Info-Button-1"
                     type="button"
                     href="adoptAChapter.html"
@@ -206,7 +196,7 @@
           </div>
           <div class="col">
             <div class="card">
-              <div class="card-body p-4">
+              <div class="card-body px-4">
                 <figure class="figure">
                   <img class="img-fluid figure-img" />
                   <h4>Community Service</h4>
@@ -214,7 +204,7 @@
                     Serving the Community is our first, middle, and last name
                   </p>
                   <a
-                    class="btn btn-primary"
+                    class="btn"
                     id="CompEvents-Info-Button-2"
                     type="button"
                     href="CSevents.html"
@@ -228,26 +218,26 @@
         </div>
         <div class="container py-0 py-xl-0">
           <h1 style="text-align: center; padding-top: 7vh;">
-            Our Member Of The Month - September 2023
+            Our Member Of The Month - November 2023
           </h1>
-          <div class="row gy-4 gy-md-0">
-            <div class="col-md-6">
-              <div class="p-xl-5 m-xl-5">
+          <div class="row">
+            <div class="col-xl-6" style="float: left;">
+              <div class="px-xl-5 mx-xl-5 py-4">
                 <img
-                  class="rounded img-fluid w-100 fit-cover"
-                  style="min-height: 300px"
-                  src="assets/img/jason.jpeg"
+                  class="rounded img-fluid w-100"
+                  style="max-width: 100%; height: auto;"
+                  src="assets/img/andrew.jpeg"
                 />
               </div>
             </div>
             <div class="col-md-6 d-md-flex align-items-md-center">
               <div style="max-width: 350px">
-                <h2 class="text-uppercase fw-bold">Jiayi (Jason) Qin</h2>
-                <p class="my-3">Sophomore - Class of 2025</p>
+                <h2 class="text-uppercase fw-bold">Andrew Rebudal</h2>
+                <p class="my-3">Junior - Class of 2025</p>
                 <p class="my-3">
                   <strong
                     ><span style="color: rgb(5, 44, 101)"
-                      >From Jason himself: 请翻译</span
+                      >From Andrew himself: Placeholder lorem ipsum is not what should be used ever forever at all</span
                     ></strong
                   >
                 </p>
@@ -263,7 +253,7 @@
             height: 80vh;
             min-height: 0;
             padding-bottom: 7vh;">
-          <h1 class="text-center" style="padding-bottom: 3vh;">Agenda</h1>
+          <h1 class="text-center" style="padding-top: 3vh; padding-bottom: 3vh;">Agenda</h1>
           <iframe 
           src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%233F51B5&ctz=America%2FLos_Angeles&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&title=FBLA&src=YTFjYzU3N2EzZjQ0OTcwODYzMmU0ODA1YTlkYzQ4MGJlNDc5MTE4YTFiODEwZGFlM2I5MmMyOTc2OGVlY2ExZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB" 
           class="flex"
@@ -273,7 +263,7 @@
             scrolling="no">
           </iframe>
         </div>
-        <h1 style="text-align: center" style="padding-bottom: 3vh;">Check Out Our Social Media</h1>
+        <h1 style="text-align: center">Check Out Our Social Media</h1>
         <div
           class="text-center d-xl-flex justify-content-xl-center align-items-xl-center"
           style="text-align: center"
@@ -594,6 +584,9 @@
         ></script>
 
         <script type="text/javascript">
+          function ani() {
+            document.getElementById('donate').className = 'animate__animated animate_backInUp';
+          }
           $(document).ready(function () {
             $("#sidebarCollapse").on("click", function () {
               $("#sidebar").toggleClass("active");

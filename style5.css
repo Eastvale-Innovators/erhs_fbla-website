@@ -5,7 +5,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #ffffff;
+  background: #ffffff !important;
 }
 
 p {
@@ -14,6 +14,19 @@ p {
   font-weight: 300;
   line-height: 1.7em;
   color: #999;
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  transition: all 250ms;
+}
+.button :hover {
+  transform: scale(1.1);
 }
 
 iframe {
@@ -54,6 +67,11 @@ a:focus {
   margin: 40px 0;
 }
 
+.btn {
+  background-color: #6d7fcc;
+  color: #fff;
+} 
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -72,6 +90,7 @@ a:focus {
   color: #fff;
   transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
   transform-origin: bottom left;
+
 }
 
 #sidebar.active {
@@ -101,12 +120,12 @@ a:focus {
 }
 #sidebar ul li a:hover {
   color: #7386d5;
-  background: #fff;
+  background: #fafafa;
 }
 
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
-  color: #fff;
+  color: #fafafa;
   background: #010064;
 }
 
@@ -141,14 +160,19 @@ ul.CTAs a {
 }
 
 a.download {
-  background: #fff;
+  background: #fafafa;
   color: #7386d5;
 }
 
-a.article,
-a.article:hover {
+a.article {
   background: #6d7fcc !important;
-  color: #fff !important;
+  color: #fafafa !important;
+  transition: all 250ms;
+}
+
+a.article:hover {
+  background: #fafafa !important;
+  color: #6d7fcc !important;       
 }
 
 /* ---------------------------------------------------
