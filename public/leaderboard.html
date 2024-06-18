@@ -1,22 +1,230 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title> FBLA Leaderboard </title>
-    <!-- Google fonts. -->
-    <link href='https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&display=swap' rel='stylesheet'/>
-    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'/>
-    <!-- Use font awesome icons. -->
-    <script src="https://kit.fontawesome.com/569d8d3b6c.js" crossorigin="anonymous"></script>
-    <!-- Use firebase app and database. -->
-    <script type="module" src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- The CSS and JS file must be declared after the things above-->
-    <link rel="stylesheet" href="assets/css/leaderboard.css"/>
-    <script type="module" src="leaderboard.js"></script>
+    <title>ERHS FBLA - Adopt-A-Chapter</title>
 
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style5.css" />
+
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+        <a href="index.html"
+          ><div class="sidebar-header">
+            <h4>Welcome to</h4>
+            <h3>ERHS FBLA</h3>
+          </div>
+        </a>
+        <ul class="list-unstyled components">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="compevents.html">Competitive Events</a>
+          </li>
+          <li class="active">
+            <a
+              href="#homeSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Projects</a
+            >
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a href="AmericanEnterprise.html">American Enterprise</a>
+              </li>
+              <li>
+                <a href="csproj.html">Community Service</a>
+              </li>
+              <li>
+                <a href="adoptAChapter.html">Adopt-a-Chapter</a>
+              </li>
+              <li>
+                <a href="businessParts.html">Partnership w/ Businesses</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="CSevents.html">Community Service</a>
+            <!--<a
+              href="#pageSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Pages</a
+            >
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>-->
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@erhsfbla9334/featured">Youtube</a>
+          </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+          <li>
+            <a
+              href="https://eleanor.myschoolcentral.com/(S(tuhjikcao0ft5hhezikyptg4))/Index.aspx#/18/product/394"
+              class="article btn"
+              >Donate</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <button
+              class="btn btn-dark d-inline-block d-lg-none ml-auto"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-align-justify"></i>
+            </button>
+            <h1 style="color: #0a2e7f; align-items: left; padding-left: 1vw; translate: 0 0.5vh;"><a href="index.html">ERHS FBLA</a></h1>
+            <div
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            ></div>
+          </div>
+        </nav>
+      <div
+              class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5"
+              style="
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center / cover, url(&quot;assets/img/Arravvisit.jpg&quot;) center / cover;height: 80vh;
+              "
+            ><div><h1 style="color: white; font-size: 4.5vw">Adopt-A-Chapter</h1></div></div>
+      <section id="img-section-aac">
+          <section>
+              <div class="bg-white jumbotron">
+                <h1 class="text-center text-align:center text-uppercase fw-bold mb-3" style="color: #010064">
+                  Adopt-A-Chapter
+                </h1>
+                  <p class="text-center"></p>
+                  <p class="text-center"></p>
+              </div>
+          </section>
+      </section>
+
+      <script type="module" src="leaderboard.js"></script>
+
+
+      <h1 style="text-align: center; padding-top: 1em">
+        <span style="color: rgb(10, 46, 127)">Are YOU Interested?</span>
+      </h1>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 col-lg-4 col-xl-4">
+          <div class="d-flex flex-column justify-content-center align-items-start h-100">
+              <div class="d-flex align-items-center p-3">
+                  <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><img width="24" height="24" style="width: 24px;height: 24px;" src="assets/img/remind.jpeg"></div>
+                  <div class="px-2">
+                      <h6 class="mb-0" style="color: black;">Remind</h6>
+                      <p class="mb-0">@fblaerhs24</p>
+                  </div>
+              </div>
+              <div class="d-flex align-items-center p-3">
+                  <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-envelope" style="color: black;">
+                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+                      </svg></div>
+                  <div class="px-2">
+                      <h6 class="mb-0" style="color: black;">Email</h6>
+                      <p class="mb-0">ethantranemail@gmail.com</p>
+                  </div>
+              </div>
+              <div class="d-flex align-items-center p-3">
+                  <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="color: black;">
+                          <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                      </svg></div>
+                  <div class="px-2">
+                      <h6 class="mb-0" style="color: black;">Instagram</h6>
+                      <p class="mb-0">@mustangsfbla</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/js/Sidebar-Menu-sidebar.js"></script>z
+      <script src="assets/js/Ultimate-Sidebar-Menu.js"></script>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"
+        ></script>
+        <!-- Popper.JS -->
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+          integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+          crossorigin="anonymous"
+        ></script>
+        <!-- Bootstrap JS -->
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+          integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+          crossorigin="anonymous"
+        ></script>
+
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $("#sidebarCollapse").on("click", function () {
+              $("#sidebar").toggleClass("active");
+              $(this).toggleClass("active");
+            });
+          });
+        </script>
+        
+      </div>
+    </div>
   </body>
 </html>

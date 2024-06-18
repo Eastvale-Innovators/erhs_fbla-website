@@ -1,8 +1,14 @@
-window.onload = function() {
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js';
+import { getDatabase, ref, get, child } from 'https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js';
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
+  
+
+  function create_body() {
+    
+    console.log("Creating body");
+    const firebaseConfig = {
       apiKey: "AIzaSyBSDW1sgJfpk0PAsbp7JRLHT14-CSL8F_0",
       authDomain: "erhsfblaweb.firebaseapp.com",
       databaseURL: "https://erhsfblaweb-default-rtdb.firebaseio.com",
@@ -14,10 +20,8 @@ window.onload = function() {
   };
 
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var db = firebase.database();
-
-  function create_body() {
+  var app = initializeApp(firebaseConfig);
+  var db = getDatabase(app);
     // Create a div to hold the leaderboard
     var leaderboard = document.createElement('div')
     leaderboard.id = 'leaderboard'
@@ -25,32 +29,52 @@ window.onload = function() {
 
     leaderboard.innerHTML = '<h2>Leaderboard</h2>'
     // Get the firebase database value
-    db.ref('leaderboard/').once('value', function(message_object) {
-      // This index is mortant. It will help organize the chat in order
-      var index = parseFloat(message_object.numChildren()) + 1
-      for (var i, i = 1; (i < index); i++) {
-        db.ref('leaderboard/' + `person_${i}/name` ).get().then((snapshot) => {
-          console.log(i)
-          var lead = document.createElement('div')
-          var lead_in = document.createElement('h2')
-          lead_in.innerHTML = snapshot.val() + ": "
-          lead.innerHTML = lead_in.innerHTML
-          document.body.appendChild(lead)
-        })
-        db.ref('leaderboard/' + `person_${i}/score` ).get().then((snapshot) => {
-          var lead = document.createElement('div')
-          var lead_in = document.createElement('h2')
-          lead_in.innerHTML = snapshot.val()
-          lead.innerHTML = lead_in.innerHTML
-          document.body.appendChild(lead)
-        })
+    get(child(ref(db), `leaderboard/`)).then((snapshot) => {
+      if (snapshot.exists()) {
+        var num = snapshot.size + 1
+        for (var i, i = 1; (i < num); i++) {
+          get(child(ref(db, 'leaderboard/'), `person_${i}/name`)).then((snapshot) => {
+            if (snapshot.exists()) {
+              var lead = document.createElement('div')
+              var lead_in = document.createElement('h2')
+              lead_in.innerHTML = snapshot.val() + ": "
+              lead.innerHTML = lead_in.innerHTML
+              document.body.appendChild(lead)
+            } else {
+              console.log("No data available");
+            }
+          }).catch((error) => {
+            console.error(error);
+          });
+      
+          get(child(ref(db, 'leaderboard/'), `person_${i}/score`)).then((snapshot) => {
+            if (snapshot.exists()) {
+              var lead = document.createElement('div')
+              var lead_in = document.createElement('h2')
+              lead_in.innerHTML = snapshot.val()
+              lead.innerHTML = lead_in.innerHTML
+              document.body.appendChild(lead)
+            } else {
+              console.log("No data available");
+            }
+          }).catch((error) => {
+            console.error(error);
+          });
+        }
+      } else {
+        console.log("No data available");
       }
-    })
-  }
+    }).catch((error) => {
+      console.error(error);
+    });
+
+    
+
+    
+}
 
   // First clear the body before adding in
   // a title and the join form
-  create_body()
+  window.addEventListener("load", create_body);
 
 
-}
