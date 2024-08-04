@@ -69,10 +69,11 @@ import { getDatabase, ref, get, child } from 'https://www.gstatic.com/firebasejs
               j++;
               if (j == (num-1)) {
 
-              var lead_over_container = document.createElement('div')
-              lead_over_container.setAttribute('class', 'tabs_content')
-              lead_over_container.setAttribute('data-tab', '2')
-              var label_container = document.createElement('div')
+                var lead_over_container = document.createElement('div')
+
+                lead_over_container.setAttribute('class', 'tabs_content')
+                lead_over_container.setAttribute('data-tab', '2')
+                var label_container = document.createElement('div')
                 label_container.setAttribute('style', 'margin-left: 10%; margin-right: 15%; font-weight: bold')
 
                 var left_label_container = document.createElement('div')                
@@ -93,51 +94,53 @@ import { getDatabase, ref, get, child } from 'https://www.gstatic.com/firebasejs
                 right_label_container.append(hours_label)            
 
                 label_container.append(left_label_container, right_label_container)
-              lead_over_container.append(label_container)
+                lead_over_container.append(label_container)
 
-              for (var i = 0; i < lead_data.length; i+=3) {
-                lead_over_data.push(lead_data[i])
-                lead_over_data.push(lead_data[i+1])
-                lead_over_data.push(lead_data[i+2])
-              }
-
-
-              var rank = 1
-              for (var i = 0; i < lead_over_data.length; i+=2) {
-                var lead = document.createElement('div')
-                lead.setAttribute('style', 'outline: 1px solid grey; margin-left: 10%;  outline-offset: 10px; margin-right: 15%; border-radius: 1px')
-                /*var lead_in = document.createElement('h2')
-                lead_in.setAttribute("style", "text-align: center")
-                lead_in.innerHTML = rank + " " + lead_over_data[i] + " " + lead_over_data[i+1] + ": " + lead_over_data[i+2]
-                lead.innerHTML = lead_in.innerHTML
-                document.body.appendChild(lead)*/
+                for (var i = 0; i < lead_data.length; i+=3) {
+                  lead_over_data.push(lead_data[i])
+                  lead_over_data.push(lead_data[i+1])
+                  lead_over_data.push(lead_data[i+2])
+                }
 
 
-                var left_container = document.createElement('div')
-                var place = document.createElement('p')
-                place.setAttribute('style', 'display: inline; padding-right: 100px; color: black; margin-bottom: 40px !important;')
-                place.innerHTML = rank
-                var name = document.createElement('p')
-                name.setAttribute('style', 'display: inline; color: black; margin-bottom: 40px !important;')
-                name.innerHTML = lead_over_data[i]
+                var rank = 1
+                for (var i = 0; i < lead_over_data.length; i+=2) {
+                  var lead = document.createElement('div')
+                  lead.setAttribute('style', 'outline: 1px solid grey; margin-left: 10%;  outline-offset: 10px; margin-right: 15%; border-radius: 1px')
+                  /*var lead_in = document.createElement('h2')
+                  lead_in.setAttribute("style", "text-align: center")
+                  lead_in.innerHTML = rank + " " + lead_over_data[i] + " " + lead_over_data[i+1] + ": " + lead_over_data[i+2]
+                  lead.innerHTML = lead_in.innerHTML
+                  document.body.appendChild(lead)*/
 
-                left_container.setAttribute('style', 'float: left')
-                left_container.append(place, name)
+
+                  var left_container = document.createElement('div')
+                  var place = document.createElement('p')
+                  place.setAttribute('style', 'display: inline; padding-right: 100px; color: black; margin-bottom: 40px !important;')
+                  place.innerHTML = rank
+                  var name = document.createElement('p')
+                  name.setAttribute('style', 'display: inline; color: black; margin-bottom: 40px !important;')
+                  name.innerHTML = lead_over_data[i]
+
+                  left_container.setAttribute('style', 'float: left')
+                  left_container.append(place, name)
 
 
-                var right_container = document.createElement('div')
-                var hours = document.createElement('p')
-                hours.setAttribute('style', 'color: black; margin-bottom: 40px !important;')
-                hours.innerHTML = Math.floor(lead_over_data[i+1])
-                right_container.setAttribute('style', 'text-align: right;')
-                right_container.append(hours)
+                  var right_container = document.createElement('div')
+                  var hours = document.createElement('p')
+                  hours.setAttribute('style', 'color: black; margin-bottom: 40px !important;')
+                  hours.innerHTML = Math.floor(lead_over_data[i+1])
+                  right_container.setAttribute('style', 'text-align: right;')
+                  right_container.append(hours)
 
-                lead.append(left_container, right_container)
-                lead_over_container.append(lead)
-                rank++
-              }
-              const content = document.getElementById("content")
-              content.appendChild(lead_over_container)
+                  lead.append(left_container, right_container)
+                  lead_over_container.append(lead)
+                  rank++
+                }
+
+                lead_over_container.setAttribute('style', 'overflow-y: scroll; height: 500px; width: 80%; margin-left: 10%;')
+                var content = document.getElementById('content')
+                content.append(lead_over_container)
             }
             } else {
               console.log("No data available");
