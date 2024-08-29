@@ -75,6 +75,9 @@
             </ul>
           </li>
           <li>
+            <a href="Press_Release_Page.html">Press Release</a>
+          </li>
+          <li>
             <a href="#projectsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">General Info</a>
             <ul class="collapse list-unstyled" id="projectsSubmenu">
               <li>
@@ -82,6 +85,7 @@
               </li>
             </ul>
           </li>
+         
         </ul>
 
         <ul class="list-unstyled CTAs">
@@ -208,35 +212,7 @@
         </div>
         <div id="press-release-container" style="padding-top: 5vh; padding-bottom: 2vh; text-align: center;"></div>
 
-<script>
-  fetch('press_releases.json')
-    .then(response => response.json())
-    .then(data => {
-      const container = document.getElementById('press-release-container');
 
-      const mostRecent = data.shift();
-
-      container.innerHTML = `
-      <h1 style="padding-bottom: 3vh;">Press Release</h1>
-<div style="margin-bottom: 2rem; text-align: center;">
-  <h2 style="padding-bottom: 3vh;">Most Recent Press Release</h2>
-  <iframe src="${mostRecent.link}" width="800" height="800" style="border: none; display: block; margin: 0 auto;"></iframe>
-</div>
-
-<div style="text-align: center;">
-  <h2 style="padding-bottom: 2vh;">Past Press Releases</h2>
-  <ul style="list-style-type: none; padding-left: 0; margin: 0; display: inline-block; text-align: left;"></ul>
-  ${data.map(release => `
-     <li><a href="${release.link}"
-      target="_blank">${release.title}</a></li>
-      `).join('')}
-      </ul>
-      <div>
-        `;
-      })
-      .catch(error => console.error('Error loading press release:', error));
-</script>
-        
         <div class="container" style="
             display: flex;
             flex-direction: column;
