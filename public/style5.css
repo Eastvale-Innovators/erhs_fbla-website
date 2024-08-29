@@ -56,7 +56,7 @@ a:focus {
 
 footer {
   width: 98vw; 
-  left: 1vw;
+  margin-left: 1vw;
 }
 
 .navbar-btn {
