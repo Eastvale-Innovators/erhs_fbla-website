@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>ERHS FBLA - Home</title>
+    <title>ERHS FBLA - Press Release</title>
 
     <!-- Bootstrap CSS CDN -->
     <link
@@ -63,49 +63,69 @@
     <div>
       <div class="wrapper">
         <!-- Sidebar Holder -->
-        <nav id="sidebar" class="active">
-          <a href="index.html">
-            <div class="sidebar-header">
+        <nav id="sidebar">
+          <a href="index.html"
+            ><div class="sidebar-header">
               <h4>Welcome to</h4>
               <h3>ERHS FBLA</h3>
             </div>
           </a>
-
           <ul class="list-unstyled components">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="compevents.html">Competitive Events</a></li>
-            <li><a href="CSevents.html">Community Service</a></li>
             <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="compevents.html">Competitive Events</a>
+            </li>
+            <li class="active">
               <a
-                href="#pageSubmenu"
+                href="#homeSubmenu"
                 data-toggle="collapse"
                 aria-expanded="false"
                 class="dropdown-toggle"
                 >Projects</a
               >
-              <ul class="collapse list-unstyled" id="pageSubmenu">
+              <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
                   <a href="AmericanEnterprise.html">American Enterprise</a>
                 </li>
-                <li><a href="csproj.html">Community Service</a></li>
-                <li><a href="adoptAChapter.html">Adopt-a-Chapter</a></li>
+                <li>
+                  <a href="csproj.html">Community Service</a>
+                </li>
+                <li>
+                  <a href="adoptAChapter.html">Adopt-a-Chapter</a>
+                </li>
                 <li>
                   <a href="businessParts.html">Partnership w/ Businesses</a>
                 </li>
               </ul>
             </li>
-            <li><a href="Press_Release_Page.html">Press Release Page</a></li>
             <li>
-              <a
-                href="#projectsSubmenu"
-                data-toggle="collapse"
-                aria-expanded="false"
-                class="dropdown-toggle"
-                >General Info</a
+              <a href="CSevents.html">Community Service</a>
+              <!--<a
+                  href="#pageSubmenu"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle"
+                  >Pages</a
+                >
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                    <a href="#">Page 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 3</a>
+                  </li>
+                </ul>-->
+            </li>
+
+            <li>
+              <a href="https://www.youtube.com/@erhsfbla9334/featured"
+                >Youtube</a
               >
-              <ul class="collapse list-unstyled" id="projectsSubmenu">
-                <li><a href="baa.html">BAA</a></li>
-              </ul>
             </li>
           </ul>
 
@@ -114,7 +134,6 @@
               <a
                 href="https://eleanor.myschoolcentral.com/(S(tuhjikcao0ft5hhezikyptg4))/Index.aspx#/18/product/394"
                 class="article btn"
-                target="_blank"
                 >Donate</a
               >
             </li>
@@ -184,20 +203,28 @@
             const mostRecent = data.shift();
 
             container.innerHTML = `
-                        <h2 class="mb-4">Most Recent Press Release</h2>
-                        <iframe src="${
-                          mostRecent.link
-                        }" width="800" height="800" style="border: none; display: block; margin: 0 auto;"></iframe>
-                        <h2 class="mt-5">Past Press Releases</h2>
-                        <ul class="list-unstyled mt-3">
-                            ${data
-                              .map(
-                                (release) =>
-                                  `<li><a href="${release.link}" target="_blank">${release.title}</a></li>`
-                              )
-                              .join("")}
-                        </ul>
-                    `;
+                    <h2 class="mb-4">Most Recent Press Release</h2>
+                    <iframe src="${
+                      mostRecent.link
+                    }" width="800" height="800" style="border: none; display: block; margin: 0 auto;"></iframe>
+                    <h2 class="mt-5">Past Press Releases</h2>
+                    <ul class="list-unstyled mt-3">
+                        ${data
+                          .map(
+                            (release) =>
+                              `<li class="press-release-item" style="margin-bottom: ${
+                                release.spacing || "15px"
+                              };">
+                                        <a href="${
+                                          release.link
+                                        }" target="_blank" style="font-weight: bold; font-size: 30px;">${
+                                release.title
+                              }</a>
+                                    </li>`
+                          )
+                          .join("")}
+                    </ul>
+                `;
           })
           .catch((error) =>
             console.error("Error loading press release:", error)

@@ -1,16 +1,23 @@
-[
-  
+
+  [
     {
-      "title": "Press Release January 2023",
-      "link": "assets/documents/SLC Press Release.pdf"
+        "link": "assets/documents/SLC Press Release.pdf",
+        "title": "Press Release January 2023"
     },
     {
-      "title": "Press Release June 2023 (NOT ACTIVE)",
-      "link": "assets/documents/press-release-2023-06.pdf"
+        "link": "https://example.com/past-press-release-1",
+        "title": "Past Press Release Title 1 (NOT ACTIVE)",
+        "spacing": "20px"
     },
     {
-      "title": "Press Release November 2023 (NOT ACTIVE)",
-      "link": "assets/documents/press-release-2023-11.pdf"
+        "link": "https://example.com/past-press-release-2",
+        "title": "Past Press Release Title 2 (NOT ACTIVE)",
+        "spacing": "20px"
+    },
+    {
+        "link": "https://example.com/past-press-release-3",
+        "title": "Past Press Release Title 3 (NOT ACTIVE)",
+        "spacing": "20px"
     }
-  ]
+]
   
