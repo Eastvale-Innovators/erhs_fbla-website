@@ -80,23 +80,57 @@ footer {
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
-
 .wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-  perspective: 1500px;
+  display: block;
 }
 
 #sidebar {
   min-width: 250px;
   max-width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: #010064;
   color: #fff;
   transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
   transform-origin: bottom left;
-
+  /* top layer */
+  z-index: 9999;
 }
+
+.overlay {
+  display: none;
+  position: fixed;
+  /* full screen */
+  width: 100vw;
+  height: 100vh;
+  /* transparent black */
+  background: rgba(0, 0, 0, 0.7);
+  /* middle layer, i.e. appears below the sidebar */
+  z-index: 998;
+  opacity: 0;
+  /* animate the transition */
+  transition: all 0.5s ease-in-out;
+}
+
+/* display .overlay when it has the .active class */
+.overlay.active {
+  display: block;
+  opacity: 1;
+  z-index: 998;
+}
+
+#dismiss {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  /* top right corner of the sidebar */
+  top: 10px;
+  right: 8px;
+  cursor: pointer;
+}
+
 
 #sidebar.active {
   margin-left: -250px;
@@ -207,34 +241,43 @@ a.download {
   transition-delay: 0.2s;
 }
 
-#sidebarCollapse span:first-of-type {
-  transform: rotate(45deg) translate(2px, 2px);
-}
-#sidebarCollapse span:nth-of-type(2) {
-  opacity: 0;
-}
+#sidebarCollapse span:first-of-type,
+#sidebarCollapse span:nth-of-type(2),
 #sidebarCollapse span:last-of-type {
-  transform: rotate(-45deg) translate(1px, -1px);
-}
-
-#sidebarCollapse.active span {
   transform: none;
   opacity: 1;
   margin: 5px auto;
 }
+#sidebarCollapse.active span {
+  margin: 0 auto;
+}
+/* #sidebarCollapse.active span:first-of-type {
+  transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#sidebarCollapse.active span:last-of-type {
+  transform: rotate(-45deg) translate(1px, -1px);
+} */
+/* #sidebarCollapse.active span {
+  transform: none;
+  opacity: 1;
+  margin: 5px auto;
+} */
 
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 @media (max-width: 768px) {
-  #sidebar {
+  /* #sidebar {
     margin-left: -250px;
     transform: rotateY(90deg);
-  }
-  #sidebar.active {
+  } */
+  /* #sidebar.active {
     margin-left: 0;
     transform: none;
-  }
+  } */
   #sidebarCollapse span:first-of-type,
   #sidebarCollapse span:nth-of-type(2),
   #sidebarCollapse span:last-of-type {

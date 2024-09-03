@@ -38,14 +38,19 @@
 <body>
   <div>
     <div class="wrapper">
+      
       <!-- Sidebar Holder -->
       <nav id="sidebar" class="active">
-        <a href="index.html">
+
+        <div id="dismiss"><i id= "dismiss" class="fas fa-arrow-left border-white"></i></div>
+
+
           <div class="sidebar-header">
+            <a href="index.html">
             <h4>Welcome to</h4>
             <h3>ERHS FBLA</h3>
+            </a>
           </div>
-        </a>
 
         <ul class="list-unstyled components">
           <li>
@@ -101,12 +106,12 @@
           </li>
         </ul>
       </nav>
-
+      <div class="overlay"></div>
       <!-- Page Content Holder -->
       <div id="content" class="p-0">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light m-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
           <div class="container-fluid">
-            <button id="sidebarCollapse" class="navbar-btn active">
+            <button type="button"id="sidebarCollapse" class="btn btn-info">
               <span></span>
               <span></span>
               <span></span>
@@ -236,30 +241,8 @@
             href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
 
 
-        <!-- jQuery CDN - Slim version (=without AJAX) -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-          crossorigin="anonymous"></script>
-        <!-- Popper.JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-          integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-          crossorigin="anonymous"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-          integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-          crossorigin="anonymous"></script>
 
-        <script type="text/javascript">
-          function ani() {
-            document.getElementById('donate').className = 'animate__animated animate_backInUp';
-          }
-          $(document).ready(function () {
-            $("#sidebarCollapse").on("click", function () {
-              $("#sidebar").toggleClass("active");
-              $(this).toggleClass("active");
-            });
-          });
-        </script>
+
       </div>
     </div>
 
@@ -279,6 +262,42 @@
           <p class="mb-0" style="padding-top: 10px;"><span style="color: #0a2e7f;">Ethan Tran | Praneet Dumpa | Nataniel Jayaseelan</span></p>
       </div>
     </footer>
+            <!-- jQuery CDN - Slim version (=without AJAX) -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+          <!-- Popper.JS -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+          <!-- Bootstrap JS -->
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        console.log("check 1");
+          $('#dismiss, .overlay').on('click', function () {
+            console.log("back clicked");
+              // hide sidebar
+              $('#sidebar').addClass('active');
+              // hide overlay
+              $('.overlay').removeClass('active');
+          });
+  
+          $('#sidebarCollapse').on('click', function () {
+            console.log("check 2")
+              // open sidebar
+              $('#sidebar').removeClass('active');
+              // fade in the overlay
+              $('.overlay').addClass('active');
+
+
+              $('.collapse.in').toggleClass('in');
+              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+          });
+      });
+  </script>
 </body>
 
 </html>
